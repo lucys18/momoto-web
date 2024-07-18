@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  background-color: var(--momoto-beige);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem var(--momoto-margin) 1rem var(--momoto-margin);
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+}
+
+.footerRow {
+  display: flex;
+  gap: 5rem;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}

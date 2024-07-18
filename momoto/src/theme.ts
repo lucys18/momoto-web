@@ -6,7 +6,7 @@ export const theme = createTheme({
   headings: {
     fontWeight: "600",
     sizes: {
-      h1: { fontSize: "3rem" },
+      h1: { fontSize: "4rem" },
       h2: { fontSize: "2.5rem" },
       h3: { fontSize: "2.25rem" },
       h4: { fontSize: "1.5rem" },
@@ -22,6 +22,7 @@ export const theme = createTheme({
     momotoGreen: "#5A8C5A",
     momotoPink: "#EA9D8F",
     momotoBeige: "#f4eebd",
+    momotoMargin: "300px",
   },
 });
 
@@ -34,6 +35,7 @@ export const resolver: CSSVariablesResolver = (theme) => ({
     '--momoto-green': theme.other.momotoGreen,
     '--momoto-pink': theme.other.momotoPink,
     '--momoto-beige': theme.other.momotoBeige,
+    '--momoto-margin': theme.other.momotoMargin,
   },
   light: {},
   dark: {},

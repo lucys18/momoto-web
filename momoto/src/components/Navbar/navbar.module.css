@@ -1,0 +1,58 @@
+.secondaryHeader {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.4s ease-in;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0 var(--momoto-margin);
+}
+
+.headerBg {
+  background-color: var(--momoto-beige);
+  height: 70px;
+  padding: 0 var(--momoto-margin);
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.15);
+}
+
+.secondaryHeader .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  gap: 0rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.menuLink {
+  --nl-hover: none;
+  width: auto !important;
+
+  &[data-active]{
+    background: none;
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+    &:hover {
+      background: none;
+    }
+  }
+  
+  &:hover {
+    background: none !important;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,9 @@
+.root {
+  background-color: var(--momoto-orange) !important;
+  padding: 0 3rem !important;
+  border-radius: 0 !important;
+
+  &:hover {
+    background-color: var(--momoto-red) !important;
+  }
+}

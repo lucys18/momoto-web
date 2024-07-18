@@ -1,0 +1,24 @@
+.logoBeige * {
+  fill: var(--momoto-beige);
+  transition: 0.4s ease-in;
+}
+
+.logoOrange * {
+  fill: var(--momoto-orange);
+  transition: 0.4s ease-in;
+}
+
+.logoSm {
+  height: 40px;
+  transition: 0.4s ease-in;
+}
+
+.logoMd {
+  height: 63px;
+  transition: 0.4s ease-in;
+}
+
+.logoLg {
+  height: 90px;
+  transition: 0.4s ease-in;
+}
