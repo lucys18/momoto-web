@@ -5,15 +5,12 @@
   flex-direction: column;
   gap: 2rem;
   padding: 4rem var(--momoto-margin) 1rem var(--momoto-margin);
-
-  @media (max-width: 600px) {
-    padding: 0;
-  }
 }
 
 .footerRow {
   display: flex;
-  gap: 7rem;
+  flex-wrap: wrap;
+  gap: 6rem;
   align-items: center;
 }
 
@@ -50,5 +47,26 @@
 
 .footerColumns {
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
+}
+
+@media (max-width: 480px) {
+  .footerRow,
+  .footerColumns,
+  .footerColumn,
+  .links,
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerColumns,
+  .footerRow {
+    gap: 1rem;
+  }
+
+  .copyright {
+    font-size: var(--momoto-small-font-size);
+  }
 }

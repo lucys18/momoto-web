@@ -15,16 +15,41 @@
   filter: brightness(90%);
 }
 
+@media (max-width: 480px) {
+  .imageHeader {
+    height: 800px;
+  }
+}
+
 .header {
   height: 1000px;
   display: flex;
   align-items: flex-end;
 }
 
+@media (max-width: 480px) {
+  .header {
+    height: 800px;
+  }
+}
+
 .headerTitle {
   width: 30%;
   margin: 14rem var(--momoto-margin) !important;
   color: var(--momoto-beige);
+}
+
+@media (max-width: 480px) {
+  .headerTitle {
+    width: 80%;
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title[data-order="3"] {
+    font-size: 1rem;
+  }
 }
 
 .titles {
@@ -45,4 +70,3 @@
   display: flex;
   justify-content: center;
 }
-

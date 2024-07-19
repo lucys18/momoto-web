@@ -1,6 +1,6 @@
 .secondaryHeader {
   position: fixed;
-  height: 90px;
+  height: 95px;
   width: 100%;
   top: 0;
   left: 0;
@@ -55,4 +55,8 @@
     background: none !important;
     text-decoration: underline;
   }
+}
+
+.menuDrawer {
+  background-color: var(--momoto-beige);
 }

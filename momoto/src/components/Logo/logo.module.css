@@ -22,3 +22,9 @@
   height: 90px;
   transition: 0.4s ease-in;
 }
+
+@media (max-width: 480px) {
+  .logoMd {
+    height: 40px;
+  }
+}
