@@ -13,10 +13,42 @@
 
 .footerRow {
   display: flex;
-  gap: 5rem;
+  gap: 7rem;
+  align-items: center;
 }
 
 .footerColumn {
   display: flex;
   flex-direction: column;
+}
+
+.footerHeader {
+  font-size: var(--momoto-body-font-size);
+  font-weight: var(--momoto-body-medium-font-weight);
+}
+
+.footerLink {
+  font-size: var(--momoto-body-font-size);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.copyright {
+  font-weight: 300;
+}
+
+.socialMediaIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footerColumns {
+  display: flex;
+  gap: 5rem;
 }

@@ -54,3 +54,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 `npm install @fontsource/jost`
 
+`npm install  @tabler/icons-react`
