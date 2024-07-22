@@ -1,6 +1,9 @@
 {
   "name": "momoto",
   "version": "0.1.0",
+  "homepage": "https://lucys18.github.io/momot-web",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "private": true,
   "dependencies": {
     "@fontsource/jost": "^5.0.18",
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
