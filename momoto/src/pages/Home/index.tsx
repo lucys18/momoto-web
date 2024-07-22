@@ -7,6 +7,7 @@ import home_banner from "src/images/home_banner.jpg"
 import MomotoButton from "src/components/Button"
 import Footer from "src/components/Footer"
 import MomotoTitle from "src/components/Title"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return (

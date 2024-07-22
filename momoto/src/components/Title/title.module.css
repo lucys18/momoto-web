@@ -5,6 +5,9 @@
   &[data-color="orange"] {
     color: var(--momoto-orange);
   }
+  &[data-color="black"] {
+    color: var(--momoto-black);
+  }
 }
 
 @media (max-width: 480px) {

@@ -2,8 +2,9 @@ import { useState } from "react"
 import styles from './navbar.module.css'
 import Logo from "../Logo"
 import { Link } from "react-router-dom"
-import { Burger, Drawer, NavLink } from "@mantine/core"
+import { Burger, Drawer, Menu, NavLink } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
+import { IconChevronDown } from "@tabler/icons-react"
 
 interface NavbarProps {
   active: 'home' | 'products' | 'lookbook' | 'aboutus'
@@ -43,16 +44,40 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
     toggle()
   }
 
+  const Links = () => {
+    return (
+      <>
+        <NavLink className={styles.menuLink} label="HOME" component={Link} to='/' active={active === 'home'} />
+        <NavLink className={styles.menuLink} label="PRODUCTS" component={Link} to='/products' active={active === 'products'} />
+        <Menu
+          classNames={{ dropdown: styles.menuDropdown }}
+          trigger="click-hover"
+          position="bottom-start"
+          transitionProps={{ transition: 'fade-down', duration: 150 }}
+          shadow="md"
+          radius={0}
+          offset={0}
+        >
+          <Menu.Target>
+            <NavLink className={styles.menuLink} label={<>LOOKBOOK<IconChevronDown size={14} /></>} active={active === 'lookbook'} />
+          </Menu.Target>
+          <Menu.Dropdown>
+            <Menu.Item>Lookbook 2021</Menu.Item>
+            <Menu.Item>Lookbook 2022</Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
+        <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/' active={active === 'aboutus'} />
+      </>
+    )
+  }
+
   return (
     <div className={color ? `${styles.secondaryHeader} ${styles.headerBg}` : styles.secondaryHeader}>
       <div className={styles.nav}>
         <Logo color={logoColor} size={logoSize} />
         <div className="mantine-visible-from-md">
           <div className={styles.menu}>
-            <NavLink className={styles.menuLink} label="HOME" component={Link} to='/' active={active === 'home'} />
-            <NavLink className={styles.menuLink} label="PRODUCTS" component={Link} to='/' active={active === 'products'} />
-            <NavLink className={styles.menuLink} label="LOOKBOOK" component={Link} to='/' active={active === 'lookbook'} />
-            <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/' active={active === 'aboutus'} />
+            <Links />
           </div>
         </div>
         <div className="mantine-hidden-from-md">
@@ -67,8 +92,11 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
         classNames={{
           content: styles.menuDrawer,
         }}
+        className="mantine-hidden-from-md"
       >
-        Content
+        <div className={styles.menuLinksDrawer}>
+          <Links />
+        </div>
       </Drawer>
     </div>
   )

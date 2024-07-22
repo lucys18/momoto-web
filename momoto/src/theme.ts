@@ -33,6 +33,7 @@ export const theme = createTheme({
     momotoGreen: "#5A8C5A",
     momotoPink: "#EA9D8F",
     momotoBeige: "#f4eebd",
+    momotoGray: "#7E7E7E",
     momotoMargin: "15vw",
 
     /************************* momoto text styles  *************************/
@@ -78,6 +79,7 @@ export const resolver: CSSVariablesResolver = (theme) => ({
     "--momoto-green": theme.other.momotoGreen,
     "--momoto-pink": theme.other.momotoPink,
     "--momoto-beige": theme.other.momotoBeige,
+    "--momoto-gray": theme.other.momotoGray,
     "--momoto-margin": theme.other.momotoMargin,
 
     /************************* momoto text styles  *************************/

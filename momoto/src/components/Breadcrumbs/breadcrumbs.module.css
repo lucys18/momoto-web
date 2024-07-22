@@ -1,0 +1,11 @@
+.breadcrumbRoot {
+  margin-top: 2rem;
+}
+
+.breadcrumbItem {
+  color: var(--momoto-gray)
+}
+
+.breadcrumbItem:last-child {
+  font-weight: 600;
+}

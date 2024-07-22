@@ -1,0 +1,18 @@
+.wrapper {
+  margin: 50px var(--momoto-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.productsFound {
+  font-size: var(--momoto-overline-font-size);
+  font-weight: var(--momoto-overline-font-weight);
+  letter-spacing: var(--momoto-overline-letter-spacing);
+  color: var(--momoto-gray);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}

@@ -2,7 +2,7 @@ import { Title as MantineTitle, TitleProps } from "@mantine/core"
 import styles from './title.module.css'
 
 interface MomotoTitleProps extends TitleProps {
-  color: 'orange' | 'beige'
+  color: 'orange' | 'beige' | 'black'
 }
 
 const MomotoTitle = ({ color, ...props }: MomotoTitleProps) => (
