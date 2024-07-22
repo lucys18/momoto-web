@@ -11,7 +11,7 @@ const Footer = () => {
           <div className={styles.footerColumn}>
             <p className={styles.footerHeader}>EXPLORE MOMOTO</p>
             <div className={styles.links}>
-              <a className={styles.footerLink}>Products</a>
+              <a className={styles.footerLink} href="/products">Products</a>
               <a className={styles.footerLink}>Lookbook 2021</a>
               <a className={styles.footerLink}>Lookbook 2022</a>
               <a className={styles.footerLink}>About us</a>

@@ -11,8 +11,8 @@ const Jackets = () => {
     <Navbar active='products' />
     <div className={styles.wrapper}>
       <MomotoBreadcrumbs>
-        <p>Home</p>
-        <p>Products</p>
+        <a href='/'>Home</a>
+        <a href='/products'>Products</a>
         <p>Jackets</p>
       </MomotoBreadcrumbs>
       <div className={styles.title}>

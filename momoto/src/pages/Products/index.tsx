@@ -12,7 +12,7 @@ const Products = () => {
     <Navbar active='products' />
     <div className={styles.wrapper}>
       <MomotoBreadcrumbs>
-        <p>Home</p>
+        <a href='/'>Home</a>
         <p>Products</p>
       </MomotoBreadcrumbs>
       <SimpleGrid cols={{ sm: 2, lg: 2 }} spacing={{ base: 10, sm: 'xl' }}>

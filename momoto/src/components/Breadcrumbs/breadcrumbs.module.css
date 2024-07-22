@@ -3,9 +3,18 @@
 }
 
 .breadcrumbItem {
-  color: var(--momoto-gray)
+  color: var(--momoto-gray);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .breadcrumbItem:last-child {
   font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
