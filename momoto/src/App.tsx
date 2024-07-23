@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import Jackets from './pages/Jackets'
 import Tops from './pages/Tops'
+import ProductDetail from './pages/ProductDetail'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/products/jackets" element={<Jackets />} />
         <Route path="/products/tops" element={<Tops />} />
+        <Route path="/product" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   )

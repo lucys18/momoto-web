@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": "jacket01",
+      "name": "Jacket 01",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket01",
+      "images": [
+        "jacket01_01.jpg", 
+        "jacket01_02.jpg", 
+        "jacket01_03.jpg", 
+        "jacket01_04.jpg",
+        "jacket01_05.jpg",
+        "jacket01_06.jpg"
+      ]
+    },
+    {
+      "id": "jacket02",
+      "name": "Jacket 02",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket02"
+    },
+    {
+      "id": "jacket03",
+      "name": "Jacket 03",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket03"
+    },
+    {
+      "id": "jacket04",
+      "name": "Jacket 04",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket04"
+    },
+    {
+      "id": "jacket05",
+      "name": "Jacket 05",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket05"
+    },
+    {
+      "id": "jacket06",
+      "name": "Jacket 06",
+      "category": "jacket",
+      "price": 0,
+      "image_folder": "jacket06"
+    },
+    {
+      "id": "top01",
+      "name": "Top 01",
+      "category": "top",
+      "price": 0,
+      "image_folder": "top01"
+    },
+    {
+      "id": "top02",
+      "name": "Top 02",
+      "category": "top",
+      "price": 0,
+      "image_folder": "top02"
+    },
+    {
+      "id": "top03",
+      "name": "Top 03",
+      "category": "top",
+      "price": 0,
+      "image_folder": "top03"
+    },
+    {
+      "id": "top04",
+      "name": "Top 04",
+      "category": "top",
+      "price": 0,
+      "image_folder": "top04"
+    }
+  ]
+}

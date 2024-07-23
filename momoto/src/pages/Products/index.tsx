@@ -6,8 +6,23 @@ import MomotoTitle from 'src/components/Title'
 import Footer from 'src/components/Footer'
 import MomotoBreadcrumbs from 'src/components/Breadcrumbs'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { ProductType } from '../Home'
 
 const Products = () => {
+
+  const [products, setProducts] = useState<ProductType[] | null>(null)
+  useEffect(() => {
+    fetch("momoto-web/products.json").then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`)
+      }
+      return res.json()
+    })
+      .then((data) => setProducts(data.products))
+      .catch((error) => console.log("Unable to fetch data: ", error))
+  }, [])
+
   return <div>
     <Navbar active='products' />
     <div className={styles.wrapper}>
@@ -16,12 +31,12 @@ const Products = () => {
         <p>Products</p>
       </MomotoBreadcrumbs>
       <SimpleGrid cols={{ sm: 2, lg: 2 }} spacing={{ base: 10, sm: 'xl' }}>
-        <BackgroundImage src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png" component={Link} to='/products/jackets'>
+        <BackgroundImage src="momoto-web/images/products_jackets_1.jpg" component={Link} to='/products/jackets'>
           <div className={styles.categories}>
             <MomotoTitle color='beige' order={2}>JACKETS</MomotoTitle>
           </div>
         </BackgroundImage>
-        <BackgroundImage src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png" component={Link} to='/products/tops'>
+        <BackgroundImage src="momoto-web/images/products_tops_1.jpg" component={Link} to='/products/tops'>
           <div className={styles.categories}>
             <MomotoTitle color='beige' order={2}>TOPS</MomotoTitle>
           </div>
@@ -30,16 +45,11 @@ const Products = () => {
       <Divider my='md' />
       <MomotoTitle color='black' order={3}>All products</MomotoTitle>
       <SimpleGrid cols={{ sm: 2, lg: 4 }} spacing={{ base: 10, sm: 'xl' }}>
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-        <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
+        {
+          products?.map((product) => (
+            <ProductCard key={product.name} {...product} />
+          ))
+        }
       </SimpleGrid>
     </div>
     <Footer />

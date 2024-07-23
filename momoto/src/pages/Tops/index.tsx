@@ -1,12 +1,29 @@
 import Navbar from 'src/components/Navbar'
 import styles from './tops.module.css'
-import { Divider, SimpleGrid } from '@mantine/core'
+import { SimpleGrid } from '@mantine/core'
 import ProductCard from 'src/components/ProductCard'
 import MomotoTitle from 'src/components/Title'
 import Footer from 'src/components/Footer'
 import MomotoBreadcrumbs from 'src/components/Breadcrumbs'
+import { useEffect, useState } from 'react'
+import { ProductType } from '../Home'
 
 const Tops = () => {
+
+  const [tops, setTops] = useState<ProductType[] | null>(null)
+  useEffect(() => {
+    fetch("../momoto-web/products.json").then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`)
+      }
+      return res.json()
+    })
+      .then((data) => {
+        setTops(data.products.filter((product: ProductType) => product.category === 'top'))
+      })
+      .catch((error) => console.log("Unable to fetch data: ", error))
+  }, [])
+
   return <div>
     <Navbar active='products' />
     <div className={styles.wrapper}>
@@ -19,14 +36,13 @@ const Tops = () => {
         <MomotoTitle color='orange' order={2}>TOPS</MomotoTitle>
       </div>
       <div className={styles.productsContainer}>
-        <p className={styles.productsFound}>6 PRODUCTS</p>
+        <p className={styles.productsFound}>{tops?.length} PRODUCTS</p>
         <SimpleGrid cols={{ sm: 2, lg: 4 }} spacing={{ base: 10, sm: 'xl' }}>
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
-          <ProductCard image='https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-9.png' name="Product" price={90} />
+          {
+            tops?.map((top) => (
+              <ProductCard key={top.name} {...top}/>
+            ))
+          }
         </SimpleGrid>
       </div>
     </div>
