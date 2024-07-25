@@ -80,3 +80,11 @@
   z-index: 1000 !important;
   border: none;
 }
+
+.burgerBeige {
+  --burger-color: var(--momoto-beige);
+}
+
+.burgerOrange {
+  --burger-color: var(--momoto-orange);
+}

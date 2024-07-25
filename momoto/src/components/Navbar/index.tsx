@@ -81,7 +81,7 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
           </div>
         </div>
         <div className="mantine-hidden-from-md">
-          <Burger opened={opened} onClick={openMenu} />
+          <Burger classNames={{burger: color? styles.burgerOrange : styles.burgerBeige}} opened={opened} onClick={openMenu} />
         </div>
       </div>
       <Drawer

@@ -1,6 +1,13 @@
 import { IconBrandFacebook, IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react"
 import Logo from "../Logo"
 import styles from "./footer.module.css"
+import { Link } from "react-router-dom"
+import { ActionIcon } from "@mantine/core"
+
+
+const FB_LINK = 'https://www.facebook.com/momotoclothing?mibextid=LQQJ4d'
+const IG_LINK = 'https://www.instagram.com/momoto_clothing?igsh=bXdkcGFubWFudXZ5'
+const WA_LINK = 'https://wa.me/50685016835'
 
 const Footer = () => {
   return (
@@ -20,9 +27,15 @@ const Footer = () => {
           <div className={styles.footerColumn}>
             <p className={styles.footerHeader}>CONNECT</p>
             <div className={styles.socialMediaIcons}>
-              <IconBrandFacebook />
-              <IconBrandInstagram />
-              <IconBrandWhatsapp />
+              <ActionIcon className={styles.iconButton} variant='transparent' component={Link} to={FB_LINK}>
+                <IconBrandFacebook />
+              </ActionIcon>
+              <ActionIcon className={styles.iconButton} variant='transparent' component={Link} to={IG_LINK}>
+                <IconBrandInstagram />
+              </ActionIcon>
+              <ActionIcon className={styles.iconButton} variant='transparent' component={Link} to={WA_LINK}>
+                <IconBrandWhatsapp />
+              </ActionIcon>
             </div>
           </div>
         </div>

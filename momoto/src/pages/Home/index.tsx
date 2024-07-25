@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@mantine/core"
+import { Button, SimpleGrid } from "@mantine/core"
 import ProductCard from "src/components/ProductCard"
 import Navbar from "src/components/Navbar"
 import styles from "./home.module.css"
@@ -6,6 +6,7 @@ import MomotoButton from "src/components/Button"
 import Footer from "src/components/Footer"
 import MomotoTitle from "src/components/Title"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export interface ProductType {
   id: string
@@ -39,7 +40,7 @@ const Home = () => {
         <img className={styles.imageHeader} src="momoto-web/images/home_header.jpg" alt="Girl using momoto clothing" />
         <div className={styles.headerTitle} >
           <MomotoTitle color='beige' order={1}>Handcrafted Luxury with a Sustainable Soul</MomotoTitle>
-          <MomotoButton>SHOP PRODUCTS</MomotoButton>
+          <MomotoButton component={Link} to='/products'>SHOP PRODUCTS</MomotoButton>
         </div>
       </div>
       <div className={styles.wrapper}>
@@ -52,7 +53,7 @@ const Home = () => {
           }
         </SimpleGrid>
         <div className={styles.buttonContainer}>
-          <MomotoButton>VIEW MORE</MomotoButton>
+          <MomotoButton component={Link} to='/products'>VIEW MORE</MomotoButton>
         </div>
       </div>
       <div className={styles.banner}>

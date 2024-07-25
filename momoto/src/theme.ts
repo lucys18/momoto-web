@@ -34,7 +34,7 @@ export const theme = createTheme({
     momotoPink: "#EA9D8F",
     momotoBeige: "#f4eebd",
     momotoGray: "#7E7E7E",
-    momotoMargin: "15vw",
+    momotoMargin: "calc(16vw - 40px)",
 
     /************************* momoto text styles  *************************/
     body: {

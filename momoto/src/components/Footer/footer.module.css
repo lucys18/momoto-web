@@ -28,6 +28,10 @@
   font-size: var(--momoto-body-font-size);
   text-decoration: underline;
   cursor: pointer;
+
+  &:hover {
+    color: var(--momoto-orange);
+  }
 }
 
 .links {
@@ -68,5 +72,14 @@
 
   .copyright {
     font-size: var(--momoto-small-font-size);
+  }
+}
+
+.iconButton {
+  &[data-variant="transparent"] {
+    color: var(--momoto-black);
+    &:hover {
+      color: var(--momoto-orange);
+    }
   }
 }

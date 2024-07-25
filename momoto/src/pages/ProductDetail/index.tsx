@@ -42,8 +42,8 @@ const ProductDetail = () => {
         <a href='/products'>Products</a>
         <p>{product?.name}</p>
       </MomotoBreadcrumbs>
-      <Grid grow>
-        <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 2, xs: 2, sm: 2, lg: 1 }}>
+      <Grid gutter={{ base: 12, md: 48 }}>
+        <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 2, xs: 2, sm: 2, md: 1, lg: 1 }} >
           <ScrollArea h={800}>
             {
               product?.images?.map((image) =>
@@ -51,17 +51,17 @@ const ProductDetail = () => {
             }
           </ScrollArea>
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 1, xs: 1, sm: 1, lg: 2 }}>
+        <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 1, xs: 1, sm: 1, md: 2, lg: 2 }} >
           <div className={styles.productInfo}>
             <div className={styles.productHeader}>
               <MomotoTitle order={2} color='orange'>{product?.name}</MomotoTitle>
               <MomotoTitle order={4} color='black'>${product?.price}</MomotoTitle>
-              <p className={styles.productCode}>PRODUCT CODE:</p>
+              <p className={styles.productCode}>PRODUCT CODE: {product?.id}</p>
             </div>
             <div>
               <MomotoButton>SEND US A MESSAGE TO BUY</MomotoButton>
             </div>
-            <p className={styles.disclaimer}>All jackets available in sizes from S to L. Delivery time of 3 months from the order placement day Paying method accepts Paypal and money transfer. All shipping costs and taxes for enetring the country must be payed by the buyer and will be indicated at the time of ordering.</p>
+            <p className={styles.disclaimer}>All jackets available in sizes from S to L. Delivery time of 3 months from the order placement day. Paying method accepts Paypal and money transfer. All shipping costs and taxes for enetring the country must be payed by the buyer and will be indicated at the time of ordering.</p>
           </div>
         </Grid.Col>
       </Grid>

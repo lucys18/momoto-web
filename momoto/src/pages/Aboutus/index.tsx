@@ -25,7 +25,7 @@ const Aboutus = () => {
         <Navbar active='aboutus' dynamic />
         <div className={styles.headerAboutusMd}>
           <img className={styles.headerImageMd} src="momoto-web/images/aboutus_01.jpg" alt="Girl using momoto clothing" />
-          <div className={styles.headerTitle} >
+          <div className={styles.headerTitleMd} >
             <MomotoTitle color='beige' order={3}>AN ODE TO LATIN AMERICAN NATURE</MomotoTitle>
             <p className={styles.headerTextMd}>We supply extraordinary garments for every day.<br />
               Our products are designed to be used on multiple daily activities and stand out on the way.</p>

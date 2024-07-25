@@ -13,25 +13,43 @@ const Lookbook2021 = () => {
         <p className={styles.title}>LOOKBOOK 2021</p>
       </div>
     </div>
-    <div className={styles.wrapper}>
-      <AspectRatio ratio={298 / 414} maw={600}>
+    <div className={styles.imageCentered}>
+      <AspectRatio ratio={298 / 414} maw={600} className={styles.image2021}>
         <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_01.jpg'} alt='description' />
       </AspectRatio>
+      <div className={styles.productInfo}>
+        <p className={styles.productName}>Reversible Kimono A</p>
+        <p className={styles.productPrice}>$410.50</p>
+      </div>
     </div>
-    <AspectRatio ratio={298 / 200} >
-      <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_02.jpg'} alt='description' />
-    </AspectRatio>
-    <SimpleGrid cols={{ md: 1, lg: 2 }} spacing={0} verticalSpacing={0}>
-      <AspectRatio ratio={298 / 414} >
-        <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_03.jpg'} alt='description' />
-      </AspectRatio>
-      <AspectRatio ratio={298 / 414} >
-        <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_04.jpg'} alt='description' />
-      </AspectRatio>
-    </SimpleGrid>
-    <AspectRatio ratio={298 / 200} >
-      <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_05.jpg'} alt='description' />
-    </AspectRatio>
+    <div className={styles.imageContainer}>
+      <img className={styles.image02} src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_02.jpg'} alt='description' />
+      <div className={styles.productInfo02}>
+        <p className={styles.productName}>Reversible Kimono A</p>
+        <p className={styles.productPrice}>$410.50</p>
+      </div>
+    </div>
+    <div className={styles.imageContainer02} >
+      <div className={styles.productInfo04}>
+        <p className={styles.productName}>Reversible Kimono A</p>
+        <p className={styles.productPrice}>$410.50</p>
+      </div>
+      <SimpleGrid cols={{ md: 1, lg: 2 }} spacing={0} verticalSpacing={0}>
+        <AspectRatio ratio={298 / 414} >
+          <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_03.jpg'} alt='description' />
+        </AspectRatio>
+        <AspectRatio ratio={298 / 414} >
+          <img src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_04.jpg'} alt='description' />
+        </AspectRatio>
+      </SimpleGrid>
+    </div>
+    <div className={styles.imageContainer}>
+      <img className={styles.image02} src={'momoto-web/images/lookbooks/lookbook2021/lookbook2021_05.jpg'} alt='description' />
+      <div className={styles.productInfo04}>
+        <p className={styles.productName}>Reversible Kimono A</p>
+        <p className={styles.productPrice}>$410.50</p>
+      </div>
+    </div>
     <Footer />
   </div>)
 }

@@ -43,11 +43,12 @@
   font-size: 8.1vw;
   font-weight: 500;
   letter-spacing: 2vw;
-  line-height: 10rem;
+  line-height: 10vw;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .title {
+    font-size: 2.5rem;
     letter-spacing: 1rem;
   }
 }
@@ -63,9 +64,9 @@
 .productInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 0rem;
+  margin: 50px var(--momoto-margin);
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -80,7 +81,6 @@
 .productName,
 .productPrice {
   margin: 0;
-  text-align: center;
 }
 
 .productInfoBanner {
@@ -90,4 +90,74 @@
 .productNameBanner,
 .productPriceBanner {
   margin: 0;
+}
+
+.image2021 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.imageCentered {
+  display: flex;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.imageContainer {
+  height: 1100px;
+  margin: 10px 0;
+}
+
+.imageContainer02 {
+  margin: 10px 0;
+  height: fit-content;
+}
+
+.image03,
+.image02 {
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.image02 {
+  height: 1100px;
+}
+
+@media (max-width: 980px) {
+  .imageContainer {
+    height: 500px;
+  }
+
+  .image02 {
+    height: 500px;
+  }
+
+  .imageContainer02 {
+    height: 1000px;
+  }
+}
+
+.productInfo02 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  gap: 0rem;
+  padding: 50px var(--momoto-margin) !important;
+}
+
+.productInfo04 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0rem;
+  padding: 50px var(--momoto-margin) !important;
+  position: absolute;
 }

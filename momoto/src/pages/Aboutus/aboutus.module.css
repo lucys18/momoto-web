@@ -24,19 +24,26 @@
 
 .bannerTitleMd,
 .headerTitleMd {
-  margin: 0 var(--momoto-margin);
-  text-align: center;
+  width: 100%;
+  margin: 20px var(--momoto-margin);
   display: flex;
   flex-direction: column;
+}
+
+.bannerTitleMd {
+  gap: 1rem;
   justify-content: center;
+  text-align: center;
   & * {
     font-size: 1rem !important;
     font-weight: 500;
   }
 }
 
-.bannerTitleMd {
+.headerTitleMd {
   gap: 1rem;
+  justify-content: end;
+  text-align: end;
 }
 
 .bannerAboutusMd {

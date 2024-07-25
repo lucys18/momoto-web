@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <StrictMode>
     <MantineProvider theme={theme} cssVariablesResolver={resolver}>
-      <App/>
+      <App />
     </MantineProvider>
   </StrictMode>,
 )
