@@ -32,7 +32,7 @@ const ProductDetail = () => {
         }
       })
       .catch((error) => console.log("Unable to fetch data: ", error))
-  }, [])
+  }, [productId])
 
   return (<div>
     <Navbar active='products' />

@@ -73,7 +73,7 @@
 }
 
 .menuDrawer {
-  background-color: var(--momoto-beige);
+  background-color: var(--momoto-beige) !important;
 }
 
 .menuDropdown {

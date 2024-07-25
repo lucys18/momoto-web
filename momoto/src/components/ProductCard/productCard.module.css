@@ -8,10 +8,6 @@
   margin: 0;
 }
 
-.productInfo {
-  margin-top: 0.5rem;
-}
-
 .overlay {
   display: flex;
   align-items: center;
@@ -20,4 +16,11 @@
   & * {
     text-decoration: none;
   }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
 }

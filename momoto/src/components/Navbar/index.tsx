@@ -62,11 +62,11 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
             <NavLink className={styles.menuLink} label={<>LOOKBOOK<IconChevronDown size={14} /></>} active={active === 'lookbook'} />
           </Menu.Target>
           <Menu.Dropdown>
-            <Menu.Item>Lookbook 2021</Menu.Item>
-            <Menu.Item>Lookbook 2022</Menu.Item>
+            <Menu.Item component={Link} to='/lookbook2021'>Lookbook 2021</Menu.Item>
+            <Menu.Item component={Link} to='/lookbook2022'>Lookbook 2022</Menu.Item>
           </Menu.Dropdown>
         </Menu>
-        <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/' active={active === 'aboutus'} />
+        <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/aboutus' active={active === 'aboutus'} />
       </>
     )
   }

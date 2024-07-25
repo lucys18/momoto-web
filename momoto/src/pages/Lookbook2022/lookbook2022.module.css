@@ -1,0 +1,91 @@
+.wrapper {
+  margin: 50px var(--momoto-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.imageHeader {
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  z-index: -1;
+  filter: brightness(90%);
+}
+
+@media (max-width: 480px) {
+  .imageHeader {
+    height: 800px;
+  }
+}
+
+.header {
+  height: 1000px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 800px;
+  }
+}
+
+.headerTitle {
+  width: 100%;
+  color: var(--momoto-beige);
+}
+
+.title {
+  font-size: 8.1vw;
+  font-weight: 500;
+  letter-spacing: 2vw;
+}
+
+@media (max-width: 480px) {
+  .title {
+    letter-spacing: 1rem;
+  }
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.productInfoReverse,
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .productInfo {
+    align-items: flex-start;
+  }
+  .productInfoReverse {
+    align-items: flex-end;
+  }
+}
+
+.productName,
+.productPrice {
+  margin: 0;
+  text-align: center;
+}
+
+.productInfoBanner {
+  margin-right: var(--momoto-margin);
+}
+
+.productNameBanner,
+.productPriceBanner {
+  margin: 0;
+}

@@ -10,7 +10,7 @@ const ProductCard = ({ id, name, price, image_folder }: ProductType) => {
   const [overlayVisible, setOverlayVisible] = useState(false)
   const navigate = useNavigate()
   return (
-    <Card classNames={styles} radius={0}>
+    <Card classNames={{section: styles.section}} radius={0}>
       <Card.Section onClick={() => navigate(`/product?product-id=${id}`)}>
         <div onMouseEnter={() => setOverlayVisible(true)} onMouseLeave={() => setOverlayVisible(false)}>
           <AspectRatio ratio={298 / 414} maw={414}>
@@ -21,7 +21,7 @@ const ProductCard = ({ id, name, price, image_folder }: ProductType) => {
               <MomotoButton leftSection={<IconZoom size={14} />}>VIEW</MomotoButton>
             </Overlay>}
         </div>
-        <div className={styles.productInfo}>
+        <div>
           <p className={styles.productName}>{name}</p>
           <p className={styles.productPrice}>${price}</p>
         </div>
