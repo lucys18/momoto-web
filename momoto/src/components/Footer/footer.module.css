@@ -1,3 +1,13 @@
+.footerContainer {
+  height: 350px;
+}
+
+.imageHeader {
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+}
+
 .footer {
   width: 100%;
   background-color: var(--momoto-beige);
@@ -26,6 +36,7 @@
 
 .footerLink {
   font-size: var(--momoto-body-font-size);
+  color: var(--momoto-black);
   text-decoration: underline;
   cursor: pointer;
 

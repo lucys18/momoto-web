@@ -44,32 +44,43 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
     toggle()
   }
 
-  const Links = () => {
-    return (
-      <>
-        <NavLink className={styles.menuLink} label="HOME" component={Link} to='/' active={active === 'home'} />
-        <NavLink className={styles.menuLink} label="PRODUCTS" component={Link} to='/products' active={active === 'products'} />
-        <Menu
-          classNames={{ dropdown: styles.menuDropdown }}
-          trigger="click-hover"
-          position="bottom-start"
-          transitionProps={{ transition: 'fade-down', duration: 150 }}
-          shadow="md"
-          radius={0}
-          offset={0}
-        >
-          <Menu.Target>
-            <NavLink className={styles.menuLink} label={<>LOOKBOOK<IconChevronDown size={14} /></>} active={active === 'lookbook'} />
-          </Menu.Target>
-          <Menu.Dropdown>
-            <Menu.Item component={Link} to='/lookbook2021'>Lookbook 2021</Menu.Item>
-            <Menu.Item component={Link} to='/lookbook2022'>Lookbook 2022</Menu.Item>
-          </Menu.Dropdown>
-        </Menu>
-        <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/aboutus' active={active === 'aboutus'} />
-      </>
-    )
-  }
+  const Links = () => (
+    <>
+      <NavLink className={styles.menuLink} label="HOME" component={Link} to='/' active={active === 'home'} />
+      <NavLink className={styles.menuLink} label="PRODUCTS" component={Link} to='/products' active={active === 'products'} />
+      <Menu
+        classNames={{ dropdown: styles.menuDropdown }}
+        trigger="click-hover"
+        position="bottom-start"
+        transitionProps={{ transition: 'fade-down', duration: 150 }}
+        shadow="md"
+        radius={0}
+        offset={0}
+      >
+        <Menu.Target>
+          <NavLink className={styles.menuLink} label={<>LOOKBOOK<IconChevronDown size={14} /></>} active={active === 'lookbook'} />
+        </Menu.Target>
+        <Menu.Dropdown>
+          <Menu.Item component={Link} to='/lookbook2021'>Lookbook 2021</Menu.Item>
+          <Menu.Item component={Link} to='/lookbook2022'>Lookbook 2022</Menu.Item>
+        </Menu.Dropdown>
+      </Menu>
+      <NavLink className={styles.menuLink} label="ABOUT US" component={Link} to='/aboutus' active={active === 'aboutus'} />
+    </>
+  )
+
+
+  const LinksBurger = () => (
+    <>
+      <NavLink className={styles.menuBurger} label="HOME" component={Link} to='/' active={active === 'home'} />
+      <NavLink className={styles.menuBurger} label="PRODUCTS" component={Link} to='/products' active={active === 'products'} />
+      <NavLink className={styles.menuBurger} label="LOOKBOOK" active={active === 'lookbook'} >
+        <NavLink className={styles.menuBurger}label="Lookbook 2021" component={Link} to='/lookbook2021' />
+        <NavLink className={styles.menuBurger} label="Lookbook 2022" component={Link} to='/lookbook2022' />
+      </NavLink>
+      <NavLink className={styles.menuBurger} label="ABOUT US" component={Link} to='/aboutus' active={active === 'aboutus'} />
+    </>
+  )
 
   return (
     <div className={color ? `${styles.secondaryHeader} ${styles.headerBg}` : styles.secondaryHeader}>
@@ -81,7 +92,7 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
           </div>
         </div>
         <div className="mantine-hidden-from-md">
-          <Burger classNames={{burger: color? styles.burgerOrange : styles.burgerBeige}} opened={opened} onClick={openMenu} />
+          <Burger classNames={{ burger: color ? styles.burgerOrange : styles.burgerBeige }} opened={opened} onClick={openMenu} />
         </div>
       </div>
       <Drawer
@@ -95,7 +106,7 @@ const Navbar = ({ active, dynamic = false }: NavbarProps) => {
         className="mantine-hidden-from-md"
       >
         <div className={styles.menuLinksDrawer}>
-          <Links />
+          <LinksBurger />
         </div>
       </Drawer>
     </div>

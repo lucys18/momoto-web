@@ -1,4 +1,4 @@
-import { Button, SimpleGrid } from "@mantine/core"
+import { SimpleGrid } from "@mantine/core"
 import ProductCard from "src/components/ProductCard"
 import Navbar from "src/components/Navbar"
 import styles from "./home.module.css"
@@ -59,9 +59,11 @@ const Home = () => {
       <div className={styles.banner}>
         <img className={styles.imageBanner} src="momoto-web/images/home_banner.jpg" />
       </div>
+      {/*
       <div className={styles.wrapper}>
         <MomotoTitle color='orange' order={3}>WE'RE ON INSTAGRAM</MomotoTitle>
       </div>
+        */ }
       <Footer />
     </div>
   )

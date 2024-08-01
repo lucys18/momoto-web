@@ -1,6 +1,6 @@
 import Navbar from 'src/components/Navbar'
 import Footer from 'src/components/Footer'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import MomotoBreadcrumbs from 'src/components/Breadcrumbs'
 import styles from './producDetail.module.css'
 import { useEffect, useState } from 'react'
@@ -34,6 +34,8 @@ const ProductDetail = () => {
       .catch((error) => console.log("Unable to fetch data: ", error))
   }, [productId])
 
+  const WA_LINK = `https://wa.me/50685016835?text=Hi.%20I'm%20interested%20in%20buying%20a%20Momoto%20product.%20Its%20code%20is%20${product?.id}.`
+
   return (<div>
     <Navbar active='products' />
     <div className={styles.wrapper}>
@@ -59,7 +61,7 @@ const ProductDetail = () => {
               <p className={styles.productCode}>PRODUCT CODE: {product?.id}</p>
             </div>
             <div>
-              <MomotoButton>SEND US A MESSAGE TO BUY</MomotoButton>
+              <MomotoButton component={Link} to={WA_LINK}>SEND US A MESSAGE TO BUY</MomotoButton>
             </div>
             <p className={styles.disclaimer}>All jackets available in sizes from S to L. Delivery time of 3 months from the order placement day. Paying method accepts Paypal and money transfer. All shipping costs and taxes for enetring the country must be payed by the buyer and will be indicated at the time of ordering.</p>
           </div>

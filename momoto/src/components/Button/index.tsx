@@ -1,6 +1,6 @@
+import { forwardRef } from "react"
 import { ButtonProps, Button as MantineButton, createPolymorphicComponent } from "@mantine/core"
 import styles from './button.module.css'
-import { forwardRef } from "react"
 
 const MomotoButton = createPolymorphicComponent<'button', ButtonProps>(
   forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => (

@@ -1,6 +1,5 @@
 import Navbar from "src/components/Navbar"
 import styles from "./aboutus.module.css"
-import MomotoButton from "src/components/Button"
 import Footer from "src/components/Footer"
 import MomotoTitle from "src/components/Title"
 import { AspectRatio, SimpleGrid } from "@mantine/core"

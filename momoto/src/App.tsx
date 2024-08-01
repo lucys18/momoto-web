@@ -8,11 +8,10 @@ import ProductDetail from './pages/ProductDetail'
 import Lookbook2022 from './pages/Lookbook2022'
 import Lookbook2021 from './pages/Lookbook2021'
 import Aboutus from './pages/Aboutus'
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export function ScrollToTop() {
+function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {

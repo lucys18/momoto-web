@@ -5,6 +5,18 @@
   gap: 1rem;
 }
 
+.header {
+  height: 1000px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 800px;
+  }
+}
+
 .imageHeader {
   object-fit: cover;
   pointer-events: none;
@@ -17,18 +29,6 @@
 
 @media (max-width: 480px) {
   .imageHeader {
-    height: 800px;
-  }
-}
-
-.header {
-  height: 1000px;
-  display: flex;
-  align-items: flex-end;
-}
-
-@media (max-width: 480px) {
-  .header {
     height: 800px;
   }
 }
@@ -53,11 +53,17 @@
   }
 }
 
-.productContainer {
+.imageCentered {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin: 2rem var(--momoto-margin);
+}
+
+@media (max-width: 900px) {
+  .imageCentered {
+    flex-direction: column;
+  }
 }
 
 .productInfoReverse,
@@ -66,7 +72,6 @@
   flex-direction: column;
   justify-content: end;
   gap: 0rem;
-  margin: 50px var(--momoto-margin);
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -81,27 +86,6 @@
 .productName,
 .productPrice {
   margin: 0;
-}
-
-.productInfoBanner {
-  margin-right: var(--momoto-margin);
-}
-
-.productNameBanner,
-.productPriceBanner {
-  margin: 0;
-}
-
-.image2021 {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.imageCentered {
-  display: flex;
-  margin: 2rem 0;
-  position: relative;
 }
 
 .imageContainer {
@@ -127,6 +111,16 @@
   height: 1100px;
 }
 
+.productInfo04 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0rem;
+  padding: 50px var(--momoto-margin) !important;
+  position: absolute;
+}
+
 @media (max-width: 980px) {
   .imageContainer {
     height: 500px;
@@ -134,10 +128,6 @@
 
   .image02 {
     height: 500px;
-  }
-
-  .imageContainer02 {
-    height: 1000px;
   }
 }
 
@@ -151,13 +141,13 @@
   padding: 50px var(--momoto-margin) !important;
 }
 
-.productInfo04 {
-  height: 100%;
+.productContainer {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
-  gap: 0rem;
-  padding: 50px var(--momoto-margin) !important;
-  position: absolute;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imagesGrid {
+  width: 100%;
 }

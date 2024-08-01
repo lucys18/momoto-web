@@ -1,7 +1,6 @@
 import Navbar from 'src/components/Navbar'
 import Footer from 'src/components/Footer'
 import styles from './lookbook2022.module.css'
-import MomotoTitle from 'src/components/Title'
 import { AspectRatio, Grid, SimpleGrid } from '@mantine/core'
 
 const Lookbook2022 = () => {
