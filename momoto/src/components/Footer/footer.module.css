@@ -1,20 +1,25 @@
 .footerContainer {
-  height: 350px;
+  background-color: var(--momoto-beige);
+  position: relative;
 }
 
-.imageHeader {
+.imageFooter {
   object-fit: cover;
   pointer-events: none;
   position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 350px;
 }
 
 .footer {
   width: 100%;
-  background-color: var(--momoto-beige);
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 4rem var(--momoto-margin) 1rem var(--momoto-margin);
+  position: relative;
+  z-index: 1;
 }
 
 .footerRow {

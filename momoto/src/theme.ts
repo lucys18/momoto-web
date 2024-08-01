@@ -32,7 +32,7 @@ export const theme = createTheme({
     momotoBlue: "#4D7DC8",
     momotoGreen: "#5A8C5A",
     momotoPink: "#EA9D8F",
-    momotoBeige: "#f4eebd",
+    momotoBeige: "#F4EEDB",
     momotoGray: "#7E7E7E",
     momotoMargin: "calc(16vw - 40px)",
 

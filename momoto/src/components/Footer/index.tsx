@@ -11,6 +11,7 @@ const WA_LINK = 'https://wa.me/50685016835'
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
+      <img className={styles.imageFooter} src="momoto-web/images/footer.png" alt="" />
       <div className={styles.footer}>
         <div className={styles.footerRow}>
           <Logo color="orange" size="lg" />
