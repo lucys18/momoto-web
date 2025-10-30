@@ -1,33 +1,33 @@
 .title {
-  &[data-color="beige"] {
+  &[data-color='beige'] {
     color: var(--momoto-beige);
   }
-  &[data-color="orange"] {
+  &[data-color='orange'] {
     color: var(--momoto-orange);
   }
-  &[data-color="black"] {
+  &[data-color='black'] {
     color: var(--momoto-black);
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    &[data-order="1"] {
+    &[data-order='1'] {
       font-size: 2.5rem;
     }
-    &[data-order="2"] {
+    &[data-order='2'] {
       font-size: 2.25rem;
     }
-    &[data-order="3"] {
+    &[data-order='3'] {
       font-size: 1.75rem;
     }
-    &[data-order="4"] {
+    &[data-order='4'] {
       font-size: 1.25rem;
     }
-    &[data-order="5"] {
+    &[data-order='5'] {
       font-size: 1rem;
     }
-    &[data-order="6"] {
+    &[data-order='6'] {
       font-size: 1rem;
     }
   }

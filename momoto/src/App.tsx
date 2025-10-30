@@ -1,28 +1,29 @@
-import './App.css'
+import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Jackets from './pages/Jackets'
-import Tops from './pages/Tops'
-import ProductDetail from './pages/ProductDetail'
-import Lookbook2022 from './pages/Lookbook2022'
-import Lookbook2021 from './pages/Lookbook2021'
-import Aboutus from './pages/Aboutus'
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
+
+import Aboutus from 'src/pages/Aboutus'
+import Home from 'src/pages/Home'
+import Jackets from 'src/pages/Jackets'
+import Lookbook2021 from 'src/pages/Lookbook2021'
+import Lookbook2022 from 'src/pages/Lookbook2022'
+import ProductDetail from 'src/pages/ProductDetail'
+import Products from 'src/pages/Products'
+import Tops from 'src/pages/Tops'
+
+import './App.css'
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    // "document.documentElement.scrollTo" is the magic for React Router Dom v6
     document.documentElement.scrollTo({
       top: 0,
       left: 0,
-    });
-  }, [pathname]);
+    })
+  }, [pathname])
 
-  return null;
+  return null
 }
 
 const App = () => {
@@ -30,14 +31,14 @@ const App = () => {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/jackets" element={<Jackets />} />
-        <Route path="/products/tops" element={<Tops />} />
-        <Route path="/product" element={<ProductDetail />} />
-        <Route path="/lookbook2022" element={<Lookbook2022 />} />
-        <Route path="/lookbook2021" element={<Lookbook2021 />} />
-        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/products/jackets' element={<Jackets />} />
+        <Route path='/products/tops' element={<Tops />} />
+        <Route path='/product' element={<ProductDetail />} />
+        <Route path='/lookbook2022' element={<Lookbook2022 />} />
+        <Route path='/lookbook2021' element={<Lookbook2021 />} />
+        <Route path='/aboutus' element={<Aboutus />} />
       </Routes>
     </BrowserRouter>
   )

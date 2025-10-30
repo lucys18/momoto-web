@@ -1,7 +1,7 @@
 {
   "name": "momoto",
   "version": "0.1.0",
-  "homepage": "https://lucys18.github.io/momoto-web",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@fontsource/jost": "^5.0.18",
@@ -28,12 +28,15 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -49,6 +52,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.6.2"
   }
 }

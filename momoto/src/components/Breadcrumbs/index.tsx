@@ -1,5 +1,9 @@
-import { BreadcrumbsProps, Breadcrumbs as MantineBreadcrumbs } from "@mantine/core"
-import { IconChevronRight } from "@tabler/icons-react"
+import {
+  BreadcrumbsProps,
+  Breadcrumbs as MantineBreadcrumbs,
+} from '@mantine/core'
+import { IconChevronRight } from '@tabler/icons-react'
+
 import styles from './breadcrumbs.module.css'
 
 const MomotoBreadcrumbs = (props: BreadcrumbsProps) => {
@@ -10,7 +14,8 @@ const MomotoBreadcrumbs = (props: BreadcrumbsProps) => {
         root: styles.breadcrumbRoot,
         breadcrumb: styles.breadcrumbItem,
       }}
-      {...props} />
+      {...props}
+    />
   )
 }
 

@@ -4,12 +4,12 @@
       "id": "KA-002",
       "name": "Reversible Kimono A",
       "category": "jacket",
-      "price": 410.50,
+      "price": 410.5,
       "image_folder": "jacket01",
       "images": [
-        "jacket01_01.jpg", 
-        "jacket01_02.jpg", 
-        "jacket01_03.jpg", 
+        "jacket01_01.jpg",
+        "jacket01_02.jpg",
+        "jacket01_03.jpg",
         "jacket01_04.jpg",
         "jacket01_05.jpg",
         "jacket01_06.jpg"
@@ -19,12 +19,12 @@
       "id": "KA-001",
       "name": "Reversible Kimono A",
       "category": "jacket",
-      "price": 410.50,
+      "price": 410.5,
       "image_folder": "jacket02",
       "images": [
-        "jacket02_01.jpg", 
-        "jacket02_02.jpg", 
-        "jacket02_03.jpg", 
+        "jacket02_01.jpg",
+        "jacket02_02.jpg",
+        "jacket02_03.jpg",
         "jacket02_04.jpg",
         "jacket02_05.jpg"
       ]
@@ -33,23 +33,17 @@
       "id": "JM-001",
       "name": "Jacket Momoto",
       "category": "jacket",
-      "price": 364.00,
+      "price": 364.0,
       "image_folder": "jacket03",
-      "images": [
-        "jacket03_01.jpg",
-        "jacket03_02.jpg"
-      ]
+      "images": ["jacket03_01.jpg", "jacket03_02.jpg"]
     },
     {
       "id": "JM-002",
       "name": "Jacket Momoto",
       "category": "jacket",
-      "price": 364.00,
+      "price": 364.0,
       "image_folder": "jacket04",
-      "images": [
-        "jacket04_01.jpg",
-        "jacket04_02.jpg"
-      ]
+      "images": ["jacket04_01.jpg", "jacket04_02.jpg"]
     },
     {
       "id": "jacket05",
@@ -57,9 +51,7 @@
       "category": "jacket",
       "price": 315,
       "image_folder": "jacket05",
-      "images": [
-        "jacket05_01.jpg"
-      ]
+      "images": ["jacket05_01.jpg"]
     },
     {
       "id": "jacket06",
@@ -67,10 +59,7 @@
       "category": "jacket",
       "price": 425.5,
       "image_folder": "jacket06",
-      "images": [
-        "jacket06_01.jpg",
-        "jacket06_02.jpg"
-      ]
+      "images": ["jacket06_01.jpg", "jacket06_02.jpg"]
     },
     {
       "id": "TM-001",
@@ -78,9 +67,7 @@
       "category": "top",
       "price": 324.5,
       "image_folder": "top01",
-      "images": [
-        "top01_01.jpg"
-      ]
+      "images": ["top01_01.jpg"]
     },
     {
       "id": "TM-002",
@@ -88,9 +75,7 @@
       "category": "top",
       "price": 324.5,
       "image_folder": "top02",
-      "images": [
-        "top02_01.jpg"
-      ]
+      "images": ["top02_01.jpg"]
     },
     {
       "id": "TM-003",
@@ -98,9 +83,7 @@
       "category": "top",
       "price": 324.5,
       "image_folder": "top03",
-      "images": [
-        "top03_01.jpg"
-      ]
+      "images": ["top03_01.jpg"]
     },
     {
       "id": "TM-004",
@@ -108,9 +91,7 @@
       "category": "top",
       "price": 324.5,
       "image_folder": "top04",
-      "images": [
-        "top04_01.jpg"
-      ]
+      "images": ["top04_01.jpg"]
     }
   ]
 }

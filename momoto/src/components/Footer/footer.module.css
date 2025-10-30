@@ -92,7 +92,7 @@
 }
 
 .iconButton {
-  &[data-variant="transparent"] {
+  &[data-variant='transparent'] {
     color: var(--momoto-black);
     &:hover {
       color: var(--momoto-orange);
